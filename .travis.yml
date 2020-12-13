@@ -17,6 +17,29 @@ matrix:
       env: TOXENV=py37
     - python: "3.8"
       env: TOXENV=py38
+#ppc64le support code
+    - env: TOXENV=flake8
+      arch: ppc64le
+    - env: TOXENV=isort
+      arch: ppc64le
+    - python: "2.7"
+      arch: ppc64le
+      env: TOXENV=py27
+    - python: "3.4"
+      arch: ppc64le
+      env: TOXENV=py34
+    - python: "3.5"
+      arch: ppc64le
+      env: TOXENV=py35
+    - python: "3.6"
+      arch: ppc64le
+      env: TOXENV=py36
+    - python: "3.7"
+      arch: ppc64le
+      env: TOXENV=py37
+    - python: "3.8"
+      arch: ppc64le
+      env: TOXENV=py38
 
 install: pip install tox
 script: tox
